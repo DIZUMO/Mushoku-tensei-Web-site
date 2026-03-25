@@ -1,8 +1,8 @@
 html{     
-	background-image: url("../Image/mushoku-tensei6.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: right top;
+	background-image: url("../Image/mushoku-tensei8.jpg");
+	background-size: contain;
+	background-repeat: repeat;
+	background-position: top;
 	}
 
 body {
