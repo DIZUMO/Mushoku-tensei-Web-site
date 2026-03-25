@@ -1,45 +1,42 @@
-html {     
-    background-image: url("../Image/mushoku-tensei7.jpg");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    background-size: cover;
-}
-
-body {
-    font-family: 'Georgia', sans-serif;
-    color: white;
-    margin: 0;
-    padding: 0;
-}/* ========================= */
-/* Reset / base */
+/* ========================= */
+/* RESET PROPRE (évite les bugs débiles) */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ========================= */
+/* BASE */
 html {
+    scroll-behavior: smooth;
     font-family: 'Georgia', serif;
     color: white;
-    scroll-behavior: smooth;
-    background-image: url("../Image/mushoku-tensei6.jpg");
+
+    background-image: url("../Image/mushoku-tensei7.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: center;
+}
+
+body {
+    margin: 0;
+    padding: 0;
 }
 
 /* ========================= */
-/* Header et nav */
+/* HEADER */
 header {
-    background-color: rgba(0, 0, 0, 0.6);
-    overflow: hidden;
-    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 15px 20px;
+
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 20px;
 }
 
+/* logo */
 header img {
     width: 20%;
     max-width: 150px;
@@ -52,10 +49,12 @@ header img:hover {
     transform: scale(1.05);
 }
 
+/* titre */
 .titre {
     flex: 1;
 }
 
+/* NAV */
 nav ul {
     list-style: none;
     display: flex;
@@ -68,9 +67,9 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     position: relative;
-    transition: color 0.2s ease;
 }
 
+/* underline animé (HubSpot style) */
 nav ul li a::after {
     content: "";
     position: absolute;
@@ -82,21 +81,24 @@ nav ul li a::after {
     transition: width 0.3s ease;
 }
 
-nav ul li a:hover {
-    color: #ffd700;
-}
-
 nav ul li a:hover::after {
     width: 100%;
 }
 
+nav ul li a:hover {
+    color: #ffd700;
+}
+
 /* ========================= */
-/* Sections */
+/* SECTION */
 section {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0,0,0,0.45);
     border-radius: 10px;
     padding: 20px;
     margin: 20px auto;
+
+    max-width: 1200px;
+
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -105,6 +107,8 @@ section:hover {
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
+/* ========================= */
+/* TITRES */
 h1 {
     animation: pulse 3s infinite;
     margin-bottom: 10px;
@@ -115,7 +119,44 @@ h2, h3, h4 {
 }
 
 /* ========================= */
-/* Table responsive et animation */
+/* FLEX VIDEOS (FIN DES TABLES 🪦) */
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* chaque vidéo */
+.video-cell {
+    flex: 1 1 300px;
+    max-width: 400px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ratio propre */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* ========================= */
+/* TABLE */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -124,7 +165,7 @@ table {
 }
 
 table:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
 }
 
 th, td {
@@ -134,26 +175,7 @@ th, td {
 }
 
 /* ========================= */
-/* Iframe responsive */
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%; /* 16:9 ratio */
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/* ========================= */
-/* Animations scroll */
+/* ANIMATIONS SCROLL */
 .hidden {
     opacity: 0;
     transform: translateY(30px);
@@ -165,23 +187,7 @@ th, td {
     transform: translateY(0);
 }
 
-/* images = effet zoom léger */
-img.hidden {
-    transform: scale(0.95);
-}
-
-img.visible {
-    transform: scale(1);
-}
-
-/* tables = effet plus lent */
-table.hidden {
-    transform: scale(0.9);
-    transition: all 0.8s ease;
-}
-
-/* ========================= */
-/* Hover général */
+/* images */
 img {
     transition: transform 0.4s ease, filter 0.4s ease;
     border-radius: 10px;
@@ -192,6 +198,8 @@ img:hover {
     filter: brightness(1.1);
 }
 
+/* ========================= */
+/* MICRO INTERACTIONS (HubSpot vibes) */
 a {
     transition: color 0.3s ease;
 }
@@ -201,8 +209,31 @@ a:hover {
 }
 
 /* ========================= */
-/* Pulse animation h1 */
+/* ANIMATION PULSE */
 @keyframes pulse {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.03); }
+}
+
+/* ========================= */
+/* RESPONSIVE (là où ton site arrête de casser) */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header img {
+        width: 40%;
+    }
+
+    .video-cell {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    section {
+        margin: 10px;
+    }
 }
