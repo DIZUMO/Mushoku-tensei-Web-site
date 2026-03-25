@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     const header = document.querySelector('header,body');
     header.style.opacity = 0;
-    header.style.transition = 'opacity 0.5s ease-in-out';
+    header.style.transition = 'opacity 0.2s ease-in-out';
     setTimeout(() => {
         header.style.opacity = 1;
     }, 300);
@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     titles.forEach(title => {
         title.style.transform = 'translateY(20px)';
         title.style.opacity = 0;
-        title.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+        title.style.transition = 'transform 0.2s ease, opacity 0.2s ease';
     });
     
     setTimeout(() => {
@@ -26,7 +26,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     paragraphs.forEach(p => {
         p.style.transform = 'scale(0.8)';
         p.style.opacity = 0;
-        p.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+        p.style.transition = 'transform 0.2s ease, opacity 0.2s ease';
     });
 
     setTimeout(() => {
@@ -54,7 +54,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     tables.forEach(table => {
         table.style.transform = 'scale(0.8)';
         table.style.opacity = 0;
-        table.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+        table.style.transition = 'transform 0.2s ease, opacity 0.2s ease';
     });
 
     setTimeout(() => {
