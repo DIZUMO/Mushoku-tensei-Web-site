@@ -1,68 +1,32 @@
-window.addEventListener('DOMContentLoaded', (event) => {
-    const header = document.querySelector('header,body');
-    header.style.opacity = 0;
-    header.style.transition = 'opacity 0.2s ease-in-out';
-    setTimeout(() => {
-        header.style.opacity = 1;
-    }, 300);
+document.addEventListener("DOMContentLoaded", () => {
 
-    const titles = document.querySelectorAll('h1,h2,h3,h4,p,li,img,ul,iframe');
-    titles.forEach(title => {
-        title.style.transform = 'translateY(20px)';
-        title.style.opacity = 0;
-        title.style.transition = 'transform 0.2s ease, opacity 0.2s ease';
-    });
-    
-    setTimeout(() => {
-        titles.forEach((title, index) => {
-            setTimeout(() => {
-                title.style.transform = 'translateY(0)';
-                title.style.opacity = 1;
-            }, index * 200);
+    const elements = document.querySelectorAll(
+        "h1, h2, h3, h4, p, li, img, iframe, table"
+    );
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
         });
-    }, 500);
-
-    const paragraphs = document.querySelectorAll('p,li,ul');
-    paragraphs.forEach(p => {
-        p.style.transform = 'scale(0.8)';
-        p.style.opacity = 0;
-        p.style.transition = 'transform 0.2s ease, opacity 0.2s ease';
+    }, {
+        threshold: 0.15
     });
 
-    setTimeout(() => {
-        paragraphs.forEach((p, index) => {
-            setTimeout(() => {
-                p.style.transform = 'scale(1)';
-                p.style.opacity = 1;
-            }, index * 300);
-        });
-    }, 800);
+    elements.forEach(el => {
+        el.classList.add("hidden");
+        observer.observe(el);
+    });
 
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    // Scroll fluide pour ancres
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            document.querySelector(this.getAttribute("href"))
+                .scrollIntoView({ behavior: "smooth" });
         });
     });
 
-    const tables = document.querySelectorAll('table');
-    tables.forEach(table => {
-        table.style.transform = 'scale(0.8)';
-        table.style.opacity = 0;
-        table.style.transition = 'transform 0.2s ease, opacity 0.2s ease';
-    });
-
-    setTimeout(() => {
-        tables.forEach((table, index) => {
-            setTimeout(() => {
-                table.style.transform = 'scale(1)';
-                table.style.opacity = 1;
-            }, index * 400);
-        });
-    }, 1200);
 });

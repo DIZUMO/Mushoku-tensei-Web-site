@@ -89,3 +89,55 @@ th, td {
   }
   
   
+
+/* état initial */
+.hidden {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+/* visible */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* images = effet zoom léger */
+img.hidden {
+    transform: scale(0.95);
+}
+
+img.visible {
+    transform: scale(1);
+}
+
+/* table plus lente */
+table.hidden {
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+}
+
+/* hover pour rendre vivant sans casser le cerveau */
+img:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    transition: color 0.2s ease;
+}
+
+/* iframe responsive déjà ok mais petit polish */
+iframe {
+    border-radius: 10px;
+}
+
+/* correction bug CSS */
+section {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 0; /* correction de ton "margin: top 0;" qui ne sert à rien */
+    border-radius: 10px;
+}
