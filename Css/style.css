@@ -187,7 +187,7 @@ nav ul li a:hover::after {
 /* ========================= */
 
 a {
-    transition: color 0.3s ease;
+    transition: color 0.4s ease;
 }
 
 a:hover {
@@ -203,7 +203,7 @@ section {
 }
 
 section:hover {
-    transform: translateY(-5px);
+    transform: translateY(-40px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
@@ -212,13 +212,13 @@ section:hover {
 /* ========================= */
 
 img {
-    transition: transform 0.4s ease, filter 0.4s ease;
+    transition: transform 0.2s ease, filter 0.2s ease;
     border-radius: 10px;
 }
 
 img:hover {
-    transform: scale(1.05);
-    filter: brightness(1.1);
+    transform: scale(1.02);
+    filter: brightness(0.92);
 }
 
 /* ========================= */
@@ -240,7 +240,7 @@ h1 {
 /* ========================= */
 
 table {
-    transition: transform 0.4s ease;
+    transition: transform 0.2s ease;
 }
 
 table:hover {

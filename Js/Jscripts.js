@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 🎯 On cible seulement les blocs importants (pas tout le texte)
     const elements = document.querySelectorAll(
-        "header, section, .video-cell, table, img"
+        "header, section, .video-cell, table"
     );
 
     const observer = new IntersectionObserver((entries) => {
