@@ -265,3 +265,41 @@ html {
     opacity: 1;
     transform: translateY(0);
 }
+/* Navigation par flèches */
+.nav-fleches {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  pointer-events: none; /* laisse passer les clics sur le reste du header */
+}
+
+.fleche {
+  pointer-events: all;
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  padding: 0 20px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+  transition: background 0.2s;
+  user-select: none;
+}
+
+.fleche:hover {
+  background: rgba(0, 0, 0, 0.5);
+  color: gold;
+}
+
+.page-actuelle {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
