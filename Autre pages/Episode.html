@@ -105,34 +105,35 @@
 
             </div>
         </section>
-
         <!-- SECTION ÉPISODES & FAN ANIMATIONS -->
         <section class="hidden" aria-labelledby="titre-fan">
-            <h2 id="titre-fan">Épisode et Fan animation post-anime</h2>
+            <h2 id="titre-fan">Fan animation</h2>
             <div class="video-grid">
-
                 <div class="video-cell hidden">
-                    <iframe
-                        src="https://www.youtube.com/embed/T9VCxIDIscU?si=kHKvNALMuyWyUmuC"
-                        title="Épisode 1 Mushoku Tensei gratuit sur YouTube"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
-                    <p>Épisode 1 gratuit sur YouTube</p>
+                        <div class="video-preview" onclick="loadBilibili(this)">
+                        <img src="../Image/muhsoku-tensei13.jpg" alt="Fan animation Mushoku Tensei">
+                        <div class="play-button">▶</div>
                 </div>
-
-                <div class="video-cell hidden">
-                    <iframe
-                        src="//player.bilibili.com/player.html?isOutside=true&aid=115200954998720&bvid=BV1miHfzEET2&cid=25861363351&p=1"
-                        title="Fan animation Mushoku Tensei par LanwenTuzi Studio"
-                        loading="lazy"
-                        allowfullscreen>
-                    </iframe>
                     <p>Fan animation par LanwenTuzi Studio</p>
                     <p>1er juillet 2025</p>
                 </div>
 
+                    <div class="video-cell hidden">
+                <blockquote class="twitter-tweet" data-media-max-width="560">
+                    <p lang="de" dir="ltr">
+                    Mushoku Tensei Fan animation OP Full Ver 
+                    <a href="https://t.co/OJVxI5ptUT">pic.twitter.com/OJVxI5ptUT</a>
+                    </p>
+                    &mdash; Lanwen Tuzi Studio (@LanwenTuzStudio) 
+                    <a href="https://twitter.com/LanwenTuzStudio/status/1758375753543266369">
+                    February 16, 2024
+                    </a>
+                    </blockquote>
+                    <p>Fan animation par LanwenTuzi Studio</p>
+                    <p>16 février 2024</p>
+                    </div>
             </div>
+
         </section>
 
         <!-- SECTION LISTE DES ÉPISODES -->
@@ -152,7 +153,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr><td>1</td><td>Mushoku Tensei</td><td>Jobless Reincarnation</td><td>11 jan. 2021</td><td>TV / Wakanim</td></tr>
+                    <tr><td>1</td><td>Mushoku Tensei</td><td>Jobless Reincarnation</td><td>11 jan. 2021</td><td>
+                <div class="video-cell hidden">
+                    <iframe
+                        src="https://www.youtube.com/embed/T9VCxIDIscU?si=kHKvNALMuyWyUmuC"
+                        title="Épisode 1 Mushoku Tensei gratuit sur YouTube"
+                        loading="lazy"
+                        allowfullscreen>
+                    </iframe>
+                    <p>Épisode 1 gratuit sur YouTube</p>
+                </div></td></tr>
                     <tr><td>2</td><td>Isshun no Jūryoku</td><td>The Weight of One's Life</td><td>18 jan. 2021</td><td>TV / Wakanim</td></tr>
                     <tr><td>3</td><td>Doryoku no Saki ni</td><td>What Lies Beyond Effort</td><td>25 jan. 2021</td><td>TV / Wakanim</td></tr>
                     <tr><td>4</td><td>Ushinawareta Mono</td><td>The Thing That Was Lost</td><td>1 fév. 2021</td><td>TV / Wakanim</td></tr>
@@ -245,6 +255,7 @@
     </main>
 
     <script src="../Js/Jscripts.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </body>
 </html>

@@ -32,3 +32,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+function loadBilibili(el) {
+    el.innerHTML = `
+        <iframe
+            src="//player.bilibili.com/player.html?isOutside=true&aid=115200954998720&bvid=BV1miHfzEET2&cid=25861363351&p=1&autoplay=1"
+            allowfullscreen>
+        </iframe>
+    `;
+}
