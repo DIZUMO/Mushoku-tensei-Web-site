@@ -1,7 +1,4 @@
 /* Fond d'écran spécifique à la page Épisodes */
 html {
-    background-image: url("../Image/mushoku-tensei7.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    background-image: url("../Image/mushoku-tensei4.jpg");
 }

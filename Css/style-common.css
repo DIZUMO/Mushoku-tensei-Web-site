@@ -17,6 +17,10 @@ html {
     scroll-behavior: smooth;
     font-family: 'Georgia', serif;
     color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
 }
 
 body {
