@@ -193,7 +193,7 @@ function showTableView() {
             <td>${ep.num}</td>
             <td>${ep.title}</td>
             <td>${ep.date}</td>
-            <td>${ep.videoId ? `<iframe src="${sibnetSrc(ep.videoId)}"></iframe>` : 'Vidéo à venir'}</td>
+            <td>${ep.videoId ? `<iframe src="${sibnetSrc(ep.videoId)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>` : 'Vidéo à venir'}</td>
         </tr>`;
     });
 
@@ -215,7 +215,7 @@ function renderPlayer() {
 
     const container = document.getElementById('player-video-container');
     container.innerHTML = ep.videoId
-        ? `<iframe src="${sibnetSrc(ep.videoId)}"></iframe>`
+        ? `<iframe src="${sibnetSrc(ep.videoId)}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>`
         : 'Vidéo à venir';
     setTimeout(wrapDynamicIframes, 0);
 }
@@ -235,7 +235,7 @@ function goToEp(index) {
 }
 
 function loadBilibili(el) {
-    el.innerHTML = '<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115200954998720&bvid=BV1miHfzEET2&cid=25861363351&p=1&autoplay=1"></iframe>';
+    el.innerHTML = '<iframe src="//player.bilibili.com/player.html?isOutside=true&aid=115200954998720&bvid=BV1miHfzEET2&cid=25861363351&p=1&autoplay=1" allowfullscreen></iframe>';
 }
 
 function switchTab(version) {
